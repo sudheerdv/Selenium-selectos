@@ -1,0 +1,62 @@
+Sl no	Locators	Syntax
+1	Id	driver.findElement(By.id(“a1”)) ;
+2	name	driver.findElement(By.name(“a1”)) ;
+3	className	driver.findElement(By.className(“a1”)) ;
+4	tagName	driver.findElement(By.tagName(“a1”)) ;
+5	linkText	driver.findElement(By.linkText(“a1”)) ;
+6	partialLinkText	driver.findElement(By.partialLinkText(“a1”)) ;
+7	ccsSelector	driver.findElement(By.cssSelector(“a1”)) ;
+8	xpath	driver.findElement(By.xpath(“a1”)) ;
+		
+	Syntax for xpath and css	
+	Xpath Selectos	
+		
+	1. Single Attribute	//tagName[@attribute=’attributValue’]
+	Ex : 	//input[@name=’firstName’]
+		
+	2.Multiple Attributes:	//tagname[@attribute1=’attribute1Value  and @attribute2 = ‘attribute2Value’]
+		//tagname[@attribute1=’attribute1Value][@attribute2 = ‘attribute2Value’]
+	Ex : 	//input[@name=’firstName’  and @placeholder = ‘First name’]
+		//input[@name=’firstName’][@placeholder = ‘First name’]
+		
+	3.Contains:	//tagName[contains(@attribute,’AttributeValue’)]
+	Ex : 	//input[contains(@name,’first’)]
+		
+	4.Starts-With:	//tagName[starts-with(@attribute,’AttributeValue’)]
+	Ex : 	//input[starts-with(@name,’first’)]
+		
+	5.Text:	//tagName
+	Ex : 	//label
+		
+	6.Ancestor:	Selects all ancestors (parent, grandparent, etc.) of the current node.
+		//xpath//ancestor::div
+	Ex : 	//label[text(),'Full name']//preceding::div
+		
+	7.Descendant:	Selects all descendants (children, grandchildren, etc.) of the current node.
+	Ex : 	//xpath//descendant::div
+		//label[text(),'Full name']//following::div
+		
+	css Selectos	
+		
+	1. TagName	#IDValue
+	Ex : 	#optionsRadiosInline1
+		
+	2. Class Name:	.className
+	Ex : 	.radio-inline
+		
+	3. Attributes:	tagName[attribute = ‘attributeValue’]
+	Ex : 	input[placeholder=’First name’]
+		
+		tagName[attribute1=’attributeValue1’][attribute2=’attributeValue2’]
+		input[type=’text’][placeholder=’First name’]
+		
+	4. Contains:	tagName[attribute*=’partialAttributeValue’]
+	Ex : 	input[placeholder*=’First’]
+		<input class="" type="text" placeholder="First name" name="first name"/>
+		
+	5. Ends With:	tagName[attribute$=’attributeStartingValue’]
+		input[name$=’rstName’]
+		
+	For Demo and Project site :	http://automationtesting.in
+		
+	Short cut for xpath	
